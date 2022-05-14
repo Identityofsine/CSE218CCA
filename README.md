@@ -9,8 +9,12 @@ This project was assigned to test my abilities how efficient can I:
 - Read Files from Disk
 - Lose my mind.
 
-
-
+# How to Run the Application
+```
+- Have JavaFX libraries installed and mounted into Eclipse.
+- runtime args : --module-path path/to/javafx/lib --add-modules javafx.controls,javafx.fxml (as you can figure)
+- Run GUIBackEnd.java
+```
 ## Project Requirements
 ```
 CSE218 Final Project
