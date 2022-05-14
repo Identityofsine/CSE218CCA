@@ -1,0 +1,6 @@
+.text-field {
+    -fx-border-insets: -2;
+    -fx-border-width: 2;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}

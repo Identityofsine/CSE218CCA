@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="rootAnchor" fx:id="mainAnchor" prefHeight="390.0" prefWidth="651.0" style="-fx-background-color: #393e46;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.SplashScreen">
+   <children>
+      <TabPane prefHeight="390.0" prefWidth="651.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Status">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="decision" editable="false" prefHeight="330.0" prefWidth="651.0" style="-fx-font-family: monospace;" wrapText="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="30.0" />
+                        <Text fill="#eeeeee" layoutX="289.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Decision:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Pane fx:id="darkPane" prefHeight="360.0" prefWidth="653.0" style="-fx-opacity: .5; -fx-background-color: #222831;">
+                           <children>
+                              <Button fx:id="comButt" defaultButton="true" graphicTextGap="10.0" layoutX="245.0" layoutY="155.0" mnemonicParsing="false" onAction="#completeApplication" style="-fx-opacity: 1;" text="Complete Your Application" textAlignment="CENTER" underline="true" />
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="User Info">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="315.0" prefWidth="651.0" style="-fx-background-color: #222831;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <AnchorPane layoutX="2.0" prefHeight="155.0" prefWidth="298.0">
+                                 <children>
+                                    <Pane layoutX="17.0" layoutY="68.0" prefHeight="32.0" prefWidth="273.0">
+                                       <children>
+                                          <Label fx:id="emailPlaceholder" layoutX="59.0" layoutY="7.0" prefHeight="23.0" prefWidth="213.0" text="emailPlaceholderemailPlaceholder" textAlignment="CENTER" textFill="#eeeeee" wrapText="true">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fill="#eeeeee" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </Pane>
+                                    <Text fill="#eeeeee" layoutX="18.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="firstnamePlaceholder" fill="#eeeeee" fontSmoothingType="LCD" layoutX="83.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="firstnameplace" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Italic" size="22.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="2.0" layoutY="156.0" prefHeight="160.0" prefWidth="298.0">
+                                 <children>
+                                    <Pane layoutX="7.0" layoutY="14.0" maxHeight="52.0" minHeight="32.0" prefHeight="32.0" prefWidth="266.0">
+                                       <children>
+                                          <Text fill="#eeeeee" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Text>
+                                          <Label fx:id="addressPlaceHolder" layoutX="86.0" layoutY="6.0" prefHeight="23.0" prefWidth="178.0" text="AddressPlace" textFill="#eeeeee" wrapText="true">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="8.0" layoutY="105.0">
+                                       <children>
+                                          <Text fill="#eeeeee" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Family Income:" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Text>
+                                          <Label fx:id="familyIncomePlace" layoutX="141.0" layoutY="6.0" prefHeight="23.0" prefWidth="101.0" text="123456" textAlignment="CENTER" textFill="#eeeeee" wrapText="true">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <AnchorPane layoutX="5.0" layoutY="67.0" prefHeight="27.0" prefWidth="248.0">
+                                       <children>
+                                          <Label fx:id="phonenumberPlaceholder" layoutX="147.0" layoutY="2.0" text="+1(123)536-4251" textFill="#eeeeee" wrapText="true">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fill="#eeeeee" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <Line endX="467.0" layoutX="134.0" layoutY="155.0" startX="-134.0" stroke="#00adb5" />
+                              <Line endX="-4.5" endY="315.0" layoutX="305.0" startX="-4.5" stroke="#00adb5" />
+                              <Text fill="#eeeeee" layoutX="421.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Essay:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="essay" editable="false" layoutX="307.0" layoutY="186.0" prefHeight="119.0" prefWidth="288.0" wrapText="true" />
+                              <Text fill="#eeeeee" layoutX="413.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GPA:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="gpaPlaceholder" fill="#eeeeee" fontSmoothingType="LCD" layoutX="466.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Italic" size="22.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#eeeeee" layoutX="381.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAT Score:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="satPlaceholder" fill="#eeeeee" fontSmoothingType="LCD" layoutX="488.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="800" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Italic" size="22.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#ededed8d" layoutX="359.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All of this info is final, please contact SCC if any of your information is changed" textAlignment="CENTER" wrappingWidth="198.5322265625">
+                                 <font>
+                                    <Font name="Arial Italic" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Text fill="#ededed82" layoutX="2.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Squidward Community College : Where The Clock Of Evolution Ticks Backwards. © 2022" textAlignment="CENTER" wrappingWidth="651.0" />
+   </children>
+</AnchorPane>
